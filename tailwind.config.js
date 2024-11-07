@@ -10,21 +10,21 @@ export default {
         "./resources/**/*.vue",
     ],
     theme: {
-        colors: {
-            red: "#e40510",
-            honeydew: "#ebf5df",
-            celadon: "#bad4aa",
-            vanilla: "#d4d4aa",
-            grey: "#B7B7B7",
-            black: "#000100",
-            flashWhite: "#f1f1f1",
-            white: "#ffffff"
-        },
         extend: {
             fontFamily: {
                 newsCycle: ["News Cycle"],
                 cuprum: ["Cuprum"],
                 ekMukta: ["Mukta"],
+            },
+            colors: {
+                red: "#e40510",
+                honeydew: "#ebf5df",
+                celadon: "#bad4aa",
+                vanilla: "#d4d4aa",
+                grey: "#B7B7B7",
+                black: "#000100",
+                flashWhite: "#f1f1f1",
+                white: "#ffffff",
             },
         },
     },

@@ -8,7 +8,7 @@
                         adipisicing
                         elit. Laudantium deserunt vero veniam labore repellendus magni porro!</p>
                 </div>
-                <div class="subscribes flex flex-col gap-y-3">
+                <div class="subscribes flex flex-col gap-y-4">
                     <h3 class="font-xl font-semibold font-newsCycle capitalize">get updates</h3>
                     <div class="relative">
                         <input type="email" placeholder="Enter your email"
@@ -18,22 +18,22 @@
                     </div>
                     <div class="social-media flex justify-center gap-x-4">
                         <a href=""
-                            class="h-10 w-10 bg-vanilla rounded-full flex justify-center items-center text-xl"><i
+                            class="h-8 w-8 bg-vanilla rounded-full flex justify-center items-center text-xl"><i
                                 class='bx bxl-instagram'></i></a>
                         <a href=""
-                            class="h-10 w-10 bg-vanilla rounded-full flex justify-center items-center text-xl"><i
+                            class="h-8 w-8 bg-vanilla rounded-full flex justify-center items-center text-xl"><i
                                 class='bx bxl-twitter'></i></a>
                         <a href=""
-                            class="h-10 w-10 bg-vanilla rounded-full flex justify-center items-center text-xl"><i
+                            class="h-8 w-8 bg-vanilla rounded-full flex justify-center items-center text-xl"><i
                                 class='bx bxl-facebook-circle'></i></a>
                         <a href=""
-                            class="h-10 w-10 bg-vanilla rounded-full flex justify-center items-center text-xl"><i
+                            class="h-8 w-8 bg-vanilla rounded-full flex justify-center items-center text-xl"><i
                                 class='bx bxl-discord-alt'></i></a>
                         <a href=""
-                            class="h-10 w-10 bg-vanilla rounded-full flex justify-center items-center text-xl"><i
+                            class="h-8 w-8 bg-vanilla rounded-full flex justify-center items-center text-xl"><i
                                 class='bx bxl-tiktok'></i></a>
                         <a href=""
-                            class="h-10 w-10 bg-vanilla rounded-full flex justify-center items-center text-xl"><i
+                            class="h-8 w-8 bg-vanilla rounded-full flex justify-center items-center text-xl"><i
                                 class='bx bxl-youtube'></i></a>
                     </div>
                 </div>
