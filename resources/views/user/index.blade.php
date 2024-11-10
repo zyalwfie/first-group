@@ -3,8 +3,8 @@
         Dashboard
     </x-slot:title>
 
-    <div class="bg-honeydew px-6 py-4 rounded-md flex flex-col gap-y-6">
-        <div class="table-title flex justify-between items-center">
+    <div class="bg-honeydew p-6 rounded-md flex flex-col gap-y-6">
+        <div class="table-title flex flex-col gap-y-5">
             <h1 class="text-4xl font-semibold font-newsCycle">Blogs you've been posted</h1>
             <div class="flex items-center gap-x-8">
                 <div class="flex flex-col gap-y-2">
@@ -18,18 +18,19 @@
                 </div>
             </div>
         </div>
+
         {{-- Table --}}
         <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-            <table class="w-full text-left bg-white">
+            <table class="w-full text-left bg-white table-auto">
                 <thead class="text-md font-newsCycle border-b border-vanilla">
                     <tr>
                         <th scope="col" class="px-6 py-4">
                             Title
                         </th>
-                        <th scope="col" class="px-6 py-4">
+                        <th scope="col" class="px-6 py-4 hidden">
                             Created At
                         </th>
-                        <th scope="col" class="px-6 py-4">
+                        <th scope="col" class="px-6 py-4 hidden">
                             Updated At
                         </th>
                     </tr>
@@ -40,10 +41,10 @@
                             Liverpool hammer Leeds for first
                             win in five games
                         </td>
-                        <td class="px-6 py-4">
+                        <td class="px-6 py-4 hidden">
                             12 November 2024
                         </td>
-                        <td class="px-6 py-4">
+                        <td class="px-6 py-4 hidden">
                             30 Desember 2024
                         </td>
                     </tr>
@@ -52,10 +53,10 @@
                             Liverpool hammer Leeds for first
                             win in five games
                         </td>
-                        <td class="px-6 py-4">
+                        <td class="px-6 py-4 hidden">
                             12 November 2024
                         </td>
-                        <td class="px-6 py-4">
+                        <td class="px-6 py-4 hidden">
                             30 Desember 2024
                         </td>
                     </tr>
@@ -64,10 +65,10 @@
                             Liverpool hammer Leeds for first
                             win in five games
                         </td>
-                        <td class="px-6 py-4">
+                        <td class="px-6 py-4 hidden">
                             12 November 2024
                         </td>
-                        <td class="px-6 py-4">
+                        <td class="px-6 py-4 hidden">
                             30 Desember 2024
                         </td>
                     </tr>
@@ -76,10 +77,22 @@
                             Liverpool hammer Leeds for first
                             win in five games
                         </td>
-                        <td class="px-6 py-4">
+                        <td class="px-6 py-4 hidden">
                             12 November 2024
                         </td>
-                        <td class="px-6 py-4">
+                        <td class="px-6 py-4 hidden">
+                            30 Desember 2024
+                        </td>
+                    </tr>
+                    <tr>
+                        <td scope="row" class="px-6 py-4">
+                            Liverpool hammer Leeds for first
+                            win in five games
+                        </td>
+                        <td class="px-6 py-4 hidden">
+                            12 November 2024
+                        </td>
+                        <td class="px-6 py-4 hidden">
                             30 Desember 2024
                         </td>
                     </tr>
@@ -98,10 +111,10 @@
         </div>
     </div>
 
-    <div class="flex gap-x-4">
+    <div class="flex flex-col gap-6">
         <div class="bg-honeydew px-6 py-4 rounded-md flex flex-col gap-y-2">
             <span class="font-semibold font-newsCycle text-lg capitalize">profile picture</span>
-            <div class="flex gap-7 items-center">
+            <div class="flex flex-col gap-y-4">
                 <img src="{{ asset('img/dummy.jpg') }}" alt="Profile Picture" class="w-16 h-16 rounded-full">
                 <div class="flex gap-3">
                     <a href="" class="px-4 py-1 rounded-md capitalize font-cuprum bg-vanilla border-2 border-transparent transition hover:bg-honeydew hover:border-vanilla">change
@@ -112,9 +125,9 @@
                 </div>
             </div>
         </div>
-        <div class="flex-1 p-4 bg-honeydew rounded-md">
+        <div class="flex-1 p-4 bg-honeydew rounded-md hidden">
             <a href="">
-                <textarea placeholder="Write a blog" class="w-full h-full rounded-md cursor-pointer" disabled></textarea>
+                <textarea placeholder="Write a blog" class="rounded-md cursor-pointer" disabled></textarea>
             </a>
         </div>
     </div>

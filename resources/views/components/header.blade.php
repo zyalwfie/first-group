@@ -4,7 +4,7 @@
         <h1 class="text-red text-3xl font-semibold">firstGroup.</h1>
     </div>
 
-    <div class="border-r self-stretch hidden md:block"></div>
+    <div class="border-r border-x-black self-stretch hidden md:block"></div>
 
     <nav class="flex gap-x-3 flex-1 justify-end md:justify-between items-center">
 

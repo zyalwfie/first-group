@@ -22,7 +22,7 @@ export default {
                 celadon: "#bad4aa",
                 vanilla: "#d4d4aa",
                 grey: "#B7B7B7",
-                black: "#000100",
+                duskBlack: "#000100",
                 flashWhite: "#f1f1f1",
                 white: "#ffffff",
             },
