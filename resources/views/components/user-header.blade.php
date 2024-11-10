@@ -1,5 +1,5 @@
 <header class="bg-honeydew rounded-md px-6 py-4 flex gap-x-6 items-center">
-    <form action="" class="flex-1">
+    <form action="" class="flex-1 lg:flex-none lg:justify-between">
         <div class="relative">
             <input type="search" class="w-full px-4 py-2 rounded-md font-newsCycle" placeholder="Search">
             <span class="absolute top-[50%] right-4 translate-y-[-50%]">
@@ -12,7 +12,7 @@
             </span>
         </div>
     </form>
-    <div class="flex gap-x-3 justify-end items-center">
+    <div class="flex gap-x-3 justify-end items-center lg:flex-1">
         <span class="capitalize font-cuprum text-lg hidden md:inline">first group</span>
         <span id="show-sidebar-btn" class="md:hidden">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">

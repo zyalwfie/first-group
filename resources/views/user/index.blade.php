@@ -111,10 +111,10 @@
         </div>
     </div>
 
-    <div class="flex flex-col gap-6">
+    <div class="flex gap-6">
         <div class="bg-honeydew px-6 py-4 rounded-md flex flex-col gap-y-2">
             <span class="font-semibold font-newsCycle text-lg capitalize">profile picture</span>
-            <div class="flex flex-col md:flex-row md:items-center gap-x-4">
+            <div class="flex flex-col md:flex-row md:items-center gap-4">
                 <img src="{{ asset('img/dummy.jpg') }}" alt="Profile Picture" class="w-16 h-16 rounded-full">
                 <div class="flex gap-3">
                     <a href="" class="px-4 py-1 rounded-md capitalize font-cuprum bg-vanilla border-2 border-transparent transition hover:bg-honeydew hover:border-vanilla">change
@@ -125,9 +125,9 @@
                 </div>
             </div>
         </div>
-        <div class="flex-1 p-4 bg-honeydew rounded-md hidden">
+        <div class="flex-1 p-4 bg-honeydew rounded-md hidden lg:block">
             <a href="">
-                <textarea placeholder="Write a blog" class="rounded-md cursor-pointer" disabled></textarea>
+                <textarea placeholder="Write a blog" class="rounded-md w-full h-full cursor-pointer" disabled></textarea>
             </a>
         </div>
     </div>

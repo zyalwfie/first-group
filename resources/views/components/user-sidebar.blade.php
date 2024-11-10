@@ -1,6 +1,6 @@
     <aside class="fixed top-0 right-0 bottom-0 left-0 -translate-x-[120%] md:translate-x-0 transition p-4 z-10">
 
-        <div class="bg-honeydew p-6 rounded-md z-20 h-full w-64">
+        <div class="bg-honeydew p-6 rounded-md z-20 h-full w-64 flex flex-col">
 
             <div class="flex-1 flex flex-col gap-y-3">
                 <div class="flex items-center justify-between">
