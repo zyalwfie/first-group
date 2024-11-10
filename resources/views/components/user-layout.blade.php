@@ -16,7 +16,7 @@
     <main>
         <x-user-sidebar></x-user-sidebar>
 
-        <section class="m-4 flex flex-col gap-y-4">
+        <section class="m-4 md:ml-72 flex flex-col gap-y-4">
 
             <x-user-header></x-user-header>
 

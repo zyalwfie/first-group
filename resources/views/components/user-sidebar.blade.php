@@ -1,13 +1,13 @@
     <aside class="fixed top-0 right-0 bottom-0 left-0 -translate-x-[120%] md:translate-x-0 transition p-4 z-10">
 
-        <div class="bg-honeydew p-6 rounded-md z-20 h-full w-3/4">
+        <div class="bg-honeydew p-6 rounded-md z-20 h-full w-64">
 
             <div class="flex-1 flex flex-col gap-y-3">
                 <div class="flex items-center justify-between">
                     <a href="{{ route('welcome') }}">
                         <h1 class="font-bold font-newsCycle text-4xl text-red">firstGroup.</h1>
                     </a>
-                    <span id="close-sidebar-btn">
+                    <span id="close-sidebar-btn" class="md:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                             <path
                                 d="M20 3H4c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2zM4 19V7h6v12H4zm8 0V7h8V5l.002 14H12z">
