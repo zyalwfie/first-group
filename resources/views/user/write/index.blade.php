@@ -18,7 +18,7 @@
                         </svg>
                         <div class="mt-4 flex gap-2 items-center text-sm/6 text-grey">
                             <label for="image"
-                                class="px-2 py-1 relative cursor-pointer rounded-md bg-white font-semibold text-red focus-within:outline-none focus-within:ring-2 focus-within:ring-red focus-within:ring-offset-2">
+                                class="px-2 py-1 relative cursor-pointer rounded-md bg-white font-semibold text-celadon focus-within:outline-none focus-within:ring-2 focus-within:ring-celadon focus-within:ring-offset-2">
                                 <span>Upload a file</span>
                                 <input id="image" name="image" type="file" class="sr-only">
                             </label>
@@ -33,24 +33,25 @@
                 <div class="sm:col-span-3">
                     <label for="first-name" class="block text-sm/6 font-cuprum">First name</label>
                     <div class="mt-2">
-                        <input type="text" name="first-name" id="first-name" autocomplete="given-name"
-                            class="block w-full rounded-md border-0 py-1.5  shadow-sm ring-1 ring-inset ring-grey placeholder:text-grey focus:ring-2 focus:ring-inset focus:ring-red sm:text-sm/6">
+                        <input type="text" name="first-name" id="first-name" placeholder="John"
+                            class="block w-full rounded-md py-1.5 px-2 shadow-sm border border-grey placeholder:text-grey focus:outline-none focus:border-duskBlack sm:text-sm/6 transition-all">
                     </div>
                 </div>
 
                 <div class="sm:col-span-3">
                     <label for="last-name" class="block text-sm/6 font-cuprum">Last name</label>
                     <div class="mt-2">
-                        <input type="text" name="last-name" id="last-name" autocomplete="family-name"
-                            class="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-grey placeholder:text-grey focus:ring-2 focus:ring-inset focus:ring-red sm:text-sm/6">
+                        <input type="text" name="last-name" id="last-name"
+                            class="block w-full rounded-md py-1.5 px-2 shadow-sm border border-grey placeholder:text-grey focus:outline-none focus:border-duskBlack sm:text-sm/6 transition-all">
                     </div>
                 </div>
 
                 <div class="col-span-full">
                     <label for="street-address" class="block text-sm/6 font-cuprum">Title</label>
                     <div class="mt-2">
-                        <input type="text" name="street-address" id="street-address" autocomplete="street-address"
-                            class="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-grey placeholder:text-grey focus:ring-2 focus:ring-inset focus:ring-red sm:text-sm/6">
+                        <input type="text" name="street-address" id="street-address"    
+                            class="block w-full rounded-md py-1.5 px-2 shadow-sm border border-grey placeholder:text-grey focus:outline-none focus:border-duskBlack sm:text-sm/6 transition-all">
+                            <input type="hidden" name="slug" id="slug">
                     </div>
                 </div>
 
@@ -58,14 +59,14 @@
                     <label for="about" class="block text-sm/6 font-cuprum">Content</label>
                     <div class="mt-2">
                         <textarea id="about" name="about" rows="3"
-                            class="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-grey placeholder:text-grey focus:ring-2 focus:ring-inset focus:ring-red sm:text-sm/6"></textarea>
+                            class="block w-full rounded-md py-1.5 px-2 shadow-sm border border-grey placeholder:text-grey focus:outline-none focus:border-duskBlack sm:text-sm/6 transition-all"></textarea>
                     </div>
                 </div>
 
                 <div class="sm:col-span-3">
                     <label for="teg" class="block text-sm/6 font-cuprum">Tag</label>
                     <div class="mt-2">
-                        <input type="text" name="teg" id="teg" autocomplete="given-name"
+                        <input type="text" name="teg" id="teg"
                             class="block w-full rounded-md border-0 py-1.5  shadow-sm ring-1 ring-inset ring-grey placeholder:text-grey focus:ring-2 focus:ring-inset focus:ring-red sm:text-sm/6">
                     </div>
                 </div>
@@ -73,8 +74,8 @@
                 <div class="sm:col-span-3">
                     <label for="time" class="block text-sm/6 font-cuprum">Time</label>
                     <div class="mt-2">
-                        <input type="number" name="time" id="time" autocomplete="family-name"
-                            class="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-grey placeholder:text-grey focus:ring-2 focus:ring-inset focus:ring-red sm:text-sm/6">
+                        <input type="number" name="time" id="time"
+                            class="block w-full rounded-md py-1.5 px-2 shadow-sm border border-grey placeholder:text-grey focus:outline-none focus:border-duskBlack sm:text-sm/6 transition-all">
                     </div>
                 </div>
             </div>
