@@ -1,4 +1,4 @@
-    <aside class="fixed top-0 right-0 bottom-0 left-0 -translate-x-[120%] md:translate-x-0 transition p-4 z-10">
+    <aside class="fixed top-0 right-0 bottom-0 left-0 -translate-x-[120%] md:translate-x-0 transition p-4 z-10 md:w-64">
 
         <div class="bg-honeydew p-6 rounded-md z-20 h-full w-64 flex flex-col">
 

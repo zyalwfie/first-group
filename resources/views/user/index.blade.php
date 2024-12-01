@@ -4,7 +4,7 @@
     </x-slot:title>
 
     <div class="bg-honeydew p-6 rounded-md flex flex-col gap-y-6">
-        <div class="table-title flex flex-col gap-y-5">
+        <div class="table-title flex lg:flex-row lg:justify-between gap-y-5">
             <h1 class="text-4xl font-semibold font-newsCycle">Blogs you've been posted</h1>
             <div class="flex items-center gap-x-8">
                 <div class="flex flex-col gap-y-2">
@@ -27,10 +27,10 @@
                         <th scope="col" class="px-6 py-4">
                             Title
                         </th>
-                        <th scope="col" class="px-6 py-4 hidden">
+                        <th scope="col" class="px-6 py-4">
                             Created At
                         </th>
-                        <th scope="col" class="px-6 py-4 hidden">
+                        <th scope="col" class="px-6 py-4">
                             Updated At
                         </th>
                     </tr>
@@ -41,10 +41,10 @@
                             Liverpool hammer Leeds for first
                             win in five games
                         </td>
-                        <td class="px-6 py-4 hidden">
+                        <td class="px-6 py-4">
                             12 November 2024
                         </td>
-                        <td class="px-6 py-4 hidden">
+                        <td class="px-6 py-4">
                             30 Desember 2024
                         </td>
                     </tr>
@@ -53,10 +53,10 @@
                             Liverpool hammer Leeds for first
                             win in five games
                         </td>
-                        <td class="px-6 py-4 hidden">
+                        <td class="px-6 py-4">
                             12 November 2024
                         </td>
-                        <td class="px-6 py-4 hidden">
+                        <td class="px-6 py-4">
                             30 Desember 2024
                         </td>
                     </tr>
@@ -65,10 +65,10 @@
                             Liverpool hammer Leeds for first
                             win in five games
                         </td>
-                        <td class="px-6 py-4 hidden">
+                        <td class="px-6 py-4">
                             12 November 2024
                         </td>
-                        <td class="px-6 py-4 hidden">
+                        <td class="px-6 py-4">
                             30 Desember 2024
                         </td>
                     </tr>
@@ -77,10 +77,10 @@
                             Liverpool hammer Leeds for first
                             win in five games
                         </td>
-                        <td class="px-6 py-4 hidden">
+                        <td class="px-6 py-4">
                             12 November 2024
                         </td>
-                        <td class="px-6 py-4 hidden">
+                        <td class="px-6 py-4">
                             30 Desember 2024
                         </td>
                     </tr>
@@ -89,10 +89,10 @@
                             Liverpool hammer Leeds for first
                             win in five games
                         </td>
-                        <td class="px-6 py-4 hidden">
+                        <td class="px-6 py-4">
                             12 November 2024
                         </td>
-                        <td class="px-6 py-4 hidden">
+                        <td class="px-6 py-4">
                             30 Desember 2024
                         </td>
                     </tr>
