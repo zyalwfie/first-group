@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    @vite(['resources/css/app.css', 'resources/css/base.css'])
+    @vite(['resources/css/app.css', 'resources/css/base.css','resources/js/app.js'])
     <title>{{ $title }}</title>
 </head>
 

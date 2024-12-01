@@ -2,7 +2,7 @@
     <x-slot:title>
         First Group
     </x-slot:title>
-    
+
     {{-- Header --}}
     <x-header></x-header>
     {{-- Header End --}}
@@ -60,7 +60,7 @@
                         <h2 class="font-bold text-2xl font-newsCycle capitalize">latest news</h2>
                     </div>
                     <div class="all">
-                        <a href="" class="font-semibold text-red capitalize flex gap-x-1">
+                        <a href="{{route('all-blogs')}}" class="font-semibold text-red capitalize flex gap-x-1">
                             see all
                             <span class="self-center"><i class='bx bx-right-arrow-alt bx-sm'></i></span>
                         </a>

@@ -10,4 +10,8 @@ class WelcomeController extends Controller
     {
         return view('welcome');
     }
+    public function allBlogs()
+    {
+        return view('all-blogs');
+    }
 }
