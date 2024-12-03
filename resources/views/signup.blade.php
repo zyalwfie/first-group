@@ -14,7 +14,7 @@
                         <span class="font-ekMukta text-sm text-gray-600">Please enter your details</span>
                     </div>
                 </header>
-                <form action="" class="flex flex-col gap-8">
+                <form action="{{ route('register') }}" method="POST" class="flex flex-col gap-8">
                     <div class="relative flex flex-col-reverse">
                         <input type="email" name="email" id="email"
                             class="border-b-2 px-2 pt-2 pb-3 bg-transparent border-black focus:outline-none cursor-pointer"
@@ -38,17 +38,8 @@
                                         d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0" />
                                 </svg></span>
                         </div>
-                        <div class="flex justify-between text-xs font-ekMukta">
-                            <div class="flex gap-1 items-center">
-                                <input type="checkbox" name="remember-me" id="remember-me">
-                                <label for="remember-me">Remember for 30 days</label>
-                            </div>
-                            <div>
-                                <a href="">Forgot password?</a>
-                            </div>
-                        </div>
                     </div>
-                    <button
+                    <button type="submit"
                         class="px-4 py-2 rounded-full bg-red transition cursor-pointer capitalize font-newsCycle text-lg font-bold text-flashWhite border border-transparent hover:bg-transparent hover:border-red hover:text-red">sign in</button>
                 </form>
                 <div class="text-xs font-ekMukta text-center">

@@ -12,11 +12,15 @@ Route::controller(WelcomeController::class)->group(function () {
     Route::get('/', 'index')->name('welcome');
     Route::get('/blogs', 'blogs')->name('blogs');
     Route::get('/detail', 'detail')->name('detail');
+    Route::get('/about', 'about')->name('about');
+    Route::get('/contact', 'contact')->name('contact');
 });
 
 
 Route::get('/signin', [CredentialController::class, 'signin'])->name('signin');
+Route::post('/authenticate', [CredentialController::class, 'authenticate'])->name('authenticate');
 Route::get('/signup', [CredentialController::class, 'signup'])->name('signup');
+Route::post('/register', [CredentialController::class, 'register'])->name('register');
 
 Route::prefix('user')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');

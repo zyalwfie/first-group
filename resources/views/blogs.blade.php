@@ -5,7 +5,7 @@
 
     <x-header></x-header>
     
-    <main class="my-10">
+    <main class="mb-10 mt-24">
         {{-- Slider --}}
         <section class="px-4 lg:px-40 xl:px-72">
             <div class="swiper">
