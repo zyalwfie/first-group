@@ -5,10 +5,10 @@
 
     <x-header></x-header>
 
-    <main class="my-10">
+    <main class="mb-10 mt-24">
         {{-- Greetings --}}
         <section class="mb-16 bg-honeydew">
-            <div class="p-4 rounded-md text-center flex flex-col gap-y-2 items-center">
+            <div class="px-4 py-6 rounded-md text-center flex flex-col gap-y-2 items-center">
                 <h1 class="uppercase font-newsCycle tracking-widest">welcome to firstGroup</h1>
                 <p class="font-cuprum font-bold text-xl">Craft naratives ✍️ that ignite <span class="text-red">inspiration
                         💡</span>,<br /> <span class="text-red">knowledge 📕</span> and

@@ -14,7 +14,7 @@
                         <span class="font-ekMukta text-sm text-gray-600">Register your account</span>
                     </div>
                 </header>
-                <form action="" class="flex flex-col gap-8">
+                <form action="{{ route('register') }}" method="POST" class="flex flex-col gap-8">
                     <div class="relative flex flex-col-reverse">
                         <input type="email" name="email" id="email"
                             class="border-b-2 px-2 pt-2 pb-3 bg-transparent border-black focus:outline-none cursor-pointer"
@@ -58,6 +58,9 @@
                     </div>
                     <button
                         class="px-4 py-2 rounded-full bg-red transition cursor-pointer capitalize font-newsCycle text-lg font-bold text-flashWhite border border-transparent hover:bg-transparent hover:border-red hover:text-red">sign up</button>
+                    </div>
+                    <button type="submit"
+                        class="px-4 py-2 rounded-full bg-red transition cursor-pointer capitalize font-newsCycle text-lg font-bold text-flashWhite border border-transparent hover:bg-transparent hover:border-red hover:text-red">sign in</button>
                 </form>
                 <div class="text-xs font-ekMukta text-center">
                     Already have an account? <a href="" class="font-semibold">Sign In</a>
