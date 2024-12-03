@@ -10,7 +10,7 @@ class WelcomeController extends Controller
     {
         return view('welcome');
     }
-    
+
     public function blogs()
     {
         return view('blogs');
@@ -21,4 +21,13 @@ class WelcomeController extends Controller
         return view('detail');
     }
 
+    public function about()
+    {
+        return view('about');
+    }
+
+    public function contact()
+    {
+        return view('contact');
+    }
 }

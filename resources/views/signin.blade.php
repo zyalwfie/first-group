@@ -1,4 +1,4 @@
-<x-layout :isNecessary="true">
+<x-layout>
     <x-slot:title>
         Sign In
     </x-slot:title>
@@ -14,19 +14,23 @@
                         <span class="font-ekMukta text-sm text-gray-600">Please enter your details</span>
                     </div>
                 </header>
-                <form action="" class="flex flex-col gap-8">
+                <form action="{{ route('authenticate') }}" method="POST" class="flex flex-col gap-8">
+                    @csrf
                     <div class="relative flex flex-col-reverse">
                         <input type="email" name="email" id="email"
-                            class="border-b-2 px-2 pt-2 pb-3 bg-transparent border-black focus:outline-none cursor-pointer"
-                            required>
+                            class="border-b-2 px-2 pt-2 pb-3 bg-transparent border-black focus:outline-none cursor-pointer">
                         <label for="email"
                             class="absolute top-0 translate-y-2 font-cuprum transition-all">Email</label>
+                        @error('email')
+                            <div class="text-red">
+                                wrong email!
+                            </div>
+                        @enderror
                     </div>
                     <div class="flex flex-col gap-2">
                         <div class="relative flex flex-col-reverse">
                             <input type="password" name="password" id="password"
-                                class="border-b-2 px-2 pt-2 pb-3 bg-transparent border-black focus:outline-none cursor-pointer"
-                                required>
+                                class="border-b-2 px-2 pt-2 pb-3 bg-transparent border-black focus:outline-none cursor-pointer">
                             <label for="password"
                                 class="absolute top-0 translate-y-2 font-cuprum transition-all">Password</label>
                             <span class="absolute right-2 top-0 translate-y-2"><svg xmlns="http://www.w3.org/2000/svg"
@@ -48,8 +52,9 @@
                             </div>
                         </div>
                     </div>
-                    <button
-                        class="px-4 py-2 rounded-full bg-red transition cursor-pointer capitalize font-newsCycle text-lg font-bold text-flashWhite border border-transparent hover:bg-transparent hover:border-red hover:text-red">sign in</button>
+                    <button type="submit"
+                        class="px-4 py-2 rounded-full bg-red transition cursor-pointer capitalize font-newsCycle text-lg font-bold text-flashWhite border border-transparent hover:bg-transparent hover:border-red hover:text-red">sign
+                        in</button>
                 </form>
                 <div class="text-xs font-ekMukta text-center">
                     Don't have an account? <a href="" class="font-semibold">Sign Up</a>
