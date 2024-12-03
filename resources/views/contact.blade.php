@@ -26,7 +26,7 @@
                 </div>
                 <div class="flex flex-col gap-2">
                     <h3>Media Queries</h3>
-                    <p>We value your feedback and are continuously working to improve firstGroup. Your input is crucial in shaping the future of firstGroup.</p>
+                    <p>For media-related questions or press inquiries, please contact us at firstgroup@gmail.com.</p>
                 </div>
             </div>
         </section>
