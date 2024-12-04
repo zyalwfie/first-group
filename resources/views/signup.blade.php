@@ -25,7 +25,7 @@
                     <div class="flex flex-col gap-2">
                         <div class="relative flex flex-col-reverse">
                             <input type="password" name="password" id="password"
-                                class="border-b-2 px-2 pt-2 pb-3 bg-transparent border-black focus:outline-none cursor-pointer"
+                                class="border-b-2 pl-2 pr-10 pt-2 pb-3 bg-transparent border-black focus:outline-none cursor-pointer"
                                 required>
                             <label for="password"
                                 class="absolute top-0 translate-y-2 font-cuprum transition-all">Password</label>
@@ -42,7 +42,7 @@
                     <div class="flex flex-col gap-2">
                         <div class="relative flex flex-col-reverse">
                             <input type="password" name="comfirm-password" id="confirm-password"
-                                class="border-b-2 px-2 pt-2 pb-3 bg-transparent border-black focus:outline-none cursor-pointer"
+                                class="border-b-2 pl-2 pr-10 pt-2 pb-3 bg-transparent border-black focus:outline-none cursor-pointer"
                                 required>
                             <label for="confirm-password"
                                 class="absolute top-0 translate-y-2 font-cuprum transition-all">Confirm Password</label>
@@ -57,13 +57,11 @@
                         </div>
                     </div>
                     <button
-                        class="px-4 py-2 rounded-full bg-red transition cursor-pointer capitalize font-newsCycle text-lg font-bold text-flashWhite border border-transparent hover:bg-transparent hover:border-red hover:text-red">sign up</button>
-                    </div>
-                    <button type="submit"
-                        class="px-4 py-2 rounded-full bg-red transition cursor-pointer capitalize font-newsCycle text-lg font-bold text-flashWhite border border-transparent hover:bg-transparent hover:border-red hover:text-red">sign in</button>
+                        class="px-4 py-2 rounded-full bg-red transition cursor-pointer capitalize font-newsCycle text-lg font-bold text-flashWhite border border-transparent hover:bg-transparent hover:border-red hover:text-red">sign
+                        up</button>
                 </form>
-                <div class="text-xs font-ekMukta text-center">
-                    Already have an account? <a href="" class="font-semibold">Sign In</a>
+                <div class="text-sm font-ekMukta text-center">
+                    Already have an account? <a href="{{ route('signin') }}" class="font-semibold">Sign In</a>
                 </div>
             </div>
         </div>

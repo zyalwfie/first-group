@@ -21,9 +21,9 @@ class WelcomeController extends Controller
         return view('detail');
     }
 
-    public function about()
+    public function teams()
     {
-        return view('about');
+        return view('teams');
     }
 
     public function contact()

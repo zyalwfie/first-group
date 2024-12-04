@@ -12,7 +12,7 @@ Route::controller(WelcomeController::class)->group(function () {
     Route::get('/', 'index')->name('welcome');
     Route::get('/blogs', 'blogs')->name('blogs');
     Route::get('/detail', 'detail')->name('detail');
-    Route::get('/about', 'about')->name('about');
+    Route::get('/teams', 'teams')->name('teams');
     Route::get('/contact', 'contact')->name('contact');
 });
 
