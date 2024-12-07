@@ -9,16 +9,15 @@
         <article class="flex flex-col gap-7 mb-10">
             <header class="flex flex-col items-center gap-2">
                 <div class="flex items-center justify-center gap-3">
-                    <span class="px-3 py-0.5 bg-vanilla rounded-full font-ekMukta">Author</span>
-                    <span class="font-cuprum">October 23, 2024</span>   
+                    <span class="px-3 py-0.5 bg-vanilla rounded-full font-ekMukta">{{ $blog->author->full_name }}</span>
+                    <span class="font-cuprum">{{ $blog->created_at->format('F j, Y') }}</span>   
                 </div>
-                <h1 class="text-3xl font-newsCycle font-bold">Title of the Blog</h1>
+                <h1 class="text-3xl font-newsCycle font-bold">{{ $blog->title }}</h1>
             </header>
             <main class="flex flex-col gap-2">
-                <img src="{{ asset('img/dummy.jpg') }}" alt="Blog Image" class="h-48 md:h-80 lg:h-[500px] w-full object-cover">
+                <img src="{{ $blog->image }}" alt="Blog Image" class="h-48 md:h-80 lg:h-[500px] w-full object-cover">
                 <section class="flex flex-col gap-1">
-                    <h2 class="text-xl font-newsCycle font-semibold">Sub Header</h2>
-                    <p class="font-ekMukta font-light">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus facilis expedita fugit, laborum ducimus quis illum voluptate aperiam a sequi velit itaque pariatur cumque porro magni ullam tempora qui eveniet tenetur beatae eligendi animi? Quis beatae tempore, ex, similique voluptatum odio laudantium officiis recusandae a modi obcaecati id ratione assumenda.</p>
+                    <p class="text-sm font-ekMukta">{{ $blog->content }}</p>
                 </section>
             </main>
         </article>

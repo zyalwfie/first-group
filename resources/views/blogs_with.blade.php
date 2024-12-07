@@ -12,41 +12,40 @@
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
-                    @foreach ($newestBlogs as $blog)
+                    @for ($i = 0; $i < $blogs->count(); $i++)
                         <div class="swiper-slide">
-                            <a href="{{ route('blogs.show', $blog->slug) }}">
+                            <a href="{{ route('blogs.show', $blogs[$i]->slug) }}">
                                 <div
                                     class="relative after:content-[''] after:absolute after:w-full after:h-full after:inset-0 after:bg-gradient-to-b after:from-transparent after:to-[rgba(0,0,0,0.6)]">
-                                    <img src="{{ $blog->image }}" alt="{{ $blog->title }}"
+                                    <img src="{{ $blogs[$i]->image }}" alt="{{ $blogs[$i]->title }}"
                                         class="w-full h-96 object-cover">
                                     <div class="absolute left-6 bottom-6 z-10 text-flashWhite">
                                         <h1 class="font-newsCycle text-4xl font-medium capitalize mb-2">
-                                            {{ $blog->title }}
+                                            {{ $blogs[$i]->title }}
                                         </h1>
-                                        <p class="font-ekMukta font-light text-sm">{{ $blog->content }}</p>
+                                        <p class="font-ekMukta font-light text-sm">{{ $blogs[$i]->content }}</p>
                                     </div>
                                 </div>
                             </a>
                         </div>
-                    @endforeach
+                    @endfor
                 </div>
                 <div class="swiper-scrollbar"></div>
             </div>
         </section>
 
         {{-- All News by Category --}}
-        @foreach ($tags as $tag)
             <section class="mt-16 px-4 lg:px-40 xl:px-72">
                 <div class="flex flex-col gap-y-4">
                     <div class="latest-news-header flex justify-between items-center">
                         <div class="head-title">
-                            <h2 class="font-bold text-2xl font-newsCycle capitalize">{{ $tag->name }}</h2>
+                            <h2 class="font-bold text-2xl font-newsCycle capitalize">Blogs with <a href="{{ route('blogs.authors.index', $tag->slug) }}" class="text-red transition hover:text-vanilla">{{ $tag->name }}</a></h2>
                         </div>
                     </div>
 
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                         {{-- Card --}}
-                        @foreach ($tag->blogs as $blog)
+                        @foreach ($blogs->skip($blogs->count() - 4) as $blog)
                             <div class="card">
                                 <div class="card-head flex flex-col gap-y-2">
                                     <a href="{{ route('blogs.show', $blog->slug) }}"><img src="{{ $blog->image }}"
@@ -68,7 +67,7 @@
                                     </a>
                                     <p class="text-xs line-clamp-3">{{ $blog->content }}</p>
                                     <div class="category text-sm font-cuprum">
-                                        <a href="{{ route('blogs.tags.index', $blog->tag->slug) }}" class="group"><span
+                                        <a href="{{ route('blogs.authors.index', $blog->tag->slug) }}" class="group"><span
                                                 class="capitalize text-red group-hover:text-vanilla transition">{{ $blog->tag->name }}</span></a>
                                         <span>.</span>
                                         <span>{{ $blog->time }} min to read</span>
@@ -79,7 +78,6 @@
                     </div>
                 </div>
             </section>
-        @endforeach
         {{-- All News by Category End --}}
     </main>
 
