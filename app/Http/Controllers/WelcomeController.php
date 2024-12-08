@@ -2,28 +2,25 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
+use App\Models\Team;
 use Illuminate\Http\Request;
 
 class WelcomeController extends Controller
 {
     public function index()
     {
-        return view('welcome');
+        $headBlog = Blog::latest()->limit(1)->get();
+        $previewBlogs = Blog::offset(1)->limit(4)->latest()->get();
+        
+        return view('welcome', compact('headBlog', 'previewBlogs'));
     }
 
-    public function blogs()
+    public function teams()
     {
-        return view('blogs');
-    }
+        $teams = Team::all();
 
-    public function detail()
-    {
-        return view('detail');
-    }
-
-    public function about()
-    {
-        return view('about');
+        return view('teams', compact('teams'));
     }
 
     public function contact()

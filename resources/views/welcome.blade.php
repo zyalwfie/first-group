@@ -20,30 +20,39 @@
 
         {{-- Hero --}}
         <section class="px-4 lg:px-40 xl:px-72">
-            <div class="content flex flex-col md:flex-row md:items-center md:gap-x-8 gap-y-8">
-                <img src="{{ asset('img/dummy.jpg') }}" alt="Thumbnail" class="w-[100%] h-60 rounded object-cover">
-                <div class="details flex flex-col gap-y-3">
-                    <div class="author font-cuprum text-lg flex gap-x-2 items-center">
-                        <h3 class="capitalize">author</h3>
-                        <span class="text-lg font-bold self-center">.</span>
-                        <div class="created-at">
-                            12 minutes ago
+            @foreach ($headBlog as $blog)
+                <div class="content flex flex-col md:flex-row md:items-center md:gap-x-8 gap-y-8">
+                    <img src="{{ $blog->image }}" alt="{{ $blog->title }}"
+                        class="w-[100%] h-auto md:h-64 lg:h-60 rounded object-cover">
+                    <div class="details flex flex-col gap-y-3">
+                        <div class="author font-cuprum text-lg flex gap-x-2 items-center">
+                            <a href="{{ route('blogs.authors.index', $blog->author->username) }}" class="group">
+                                <h3 class="capitalize group-hover:text-vanilla transition">
+                                    {{ $blog->author->first_name }}</h3>
+                            </a>
+                            <span class="text-lg font-bold self-center">.</span>
+                            <div class="created-at">
+                                {{ $blog->created_at->diffForHumans() }}
+                            </div>
+                        </div>
+                        <a href="{{ route('blogs.show', $blog->slug) }}" class="group">
+                            <h1
+                                class="text-2xl md:text-3xl capitalize font-bold font-newsCycle group-hover:text-red transition">
+                                {{ $blog->title }}
+                            </h1>
+                        </a>
+                        <div class="text-base font-ekMukta font-light">
+                            <p>{{ $blog->content }}</p>
+                        </div>
+                        <div class="category font-cuprum">
+                            <a href="{{ route('blogs.tags.index', $blog->tag->slug) }}" class="group"><span
+                                    class="capitalize text-red group-hover:text-vanilla transition">{{ $blog->tag->name }}</span></a>
+                            <span>.</span>
+                            <span>{{ $blog->time }} min to read</span>
                         </div>
                     </div>
-                    <div class="title text-2xl md:text-3xl capitalize font-bold font-newsCycle">
-                        <h1>where to watch 'john wick: chapter 4'</h1>
-                    </div>
-                    <div class="desc text-base font-ekMukta font-light">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae atque minus, recusandae
-                            quis aliquam facilis?</p>
-                    </div>
-                    <div class="category font-cuprum">
-                        <span class="capitalize text-red">movies</span>
-                        <span>.</span>
-                        <span>4 min to read</span>
-                    </div>
                 </div>
-            </div>
+            @endforeach
         </section>
         {{-- Hero End --}}
 
@@ -52,47 +61,51 @@
             <div class="flex flex-col gap-y-4">
                 <div class="latest-news-header flex justify-between items-center">
                     <div class="head-title">
-                        <a href="{{ route('blogs') }}">
+                        <a href="{{ route('blogs.index') }}">
                             <h2 class="font-bold text-2xl font-newsCycle capitalize">latest news</h2>
                         </a>
                     </div>
-                    <div class="all">
-                        <a href="{{ route('blogs') }}" class="font-semibold text-red capitalize flex gap-x-1">
-                            see all
-                            <span class="self-center"><i class='bx bx-right-arrow-alt bx-sm'></i></span>
-                        </a>
-                    </div>
+                    <a href="{{ route('blogs.index') }}"
+                        class="group hover:animate-pulse font-semibold text-red capitalize flex gap-x-1">
+                        see all
+                        <span class="self-center group-hover:animate-wiggle transition"><i
+                                class='bx bx-right-arrow-alt bx-sm'></i></span>
+                    </a>
                 </div>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                     {{-- Card --}}
-                    @for ($i = 0; $i < 4; $i++)
+                    @foreach ($previewBlogs as $blog)
                         <div class="card">
                             <div class="card-head flex flex-col gap-y-2">
-                                <a href="{{ route('detail') }}"><img src="{{ asset('img/dummy.jpg') }}"
-                                        alt="Card Thumbnail" class="rounded"></a>
+                                <a href="{{ route('blogs.show', $blog->slug) }}"><img src="{{ $blog->image }}"
+                                        alt="{{ $blog->title }}" class="rounded"></a>
                                 <div class="author font-cuprum text-sm flex gap-x-2 items-center">
-                                    <h3 class="capitalize">author</h3>
+                                    <a href="{{ route('blogs.authors.index', $blog->author->username) }}" class="group">
+                                        <h3 class="capitalize group-hover:text-vanilla transition">
+                                            {{ $blog->author->first_name }}</h3>
+                                    </a>
                                     <span class="text-lg font-bold self-center">.</span>
-                                    <div class="created-at">12 minutes ago</div>
+                                    <div class="created-at">{{ $blog->created_at->diffForHumans() }}</div>
                                 </div>
                             </div>
                             <div class="card-body flex flex-col gap-y-2">
-                                <a href="{{ route('detail') }}">
-                                    <h4 class="text-lg leading-5 font-newsCycle font-semibold">Liverpool hammer Leeds
-                                        for
-                                        first
-                                        win in five games</h4>
+                                <a href="{{ route('blogs.show', $blog->slug) }}" class="group">
+                                    <h4
+                                        class="text-lg group-hover:text-red leading-5 font-newsCycle font-semibold line-clamp-1 transition">
+                                        {{ $blog->title }}</h4>
                                 </a>
-                                <p class="text-xs">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat
-                                    sapiente nostrum possimus id dolor magnam fuga accusamus iure rerum in?</p>
+                                <p class="text-sm line-clamp-3">
+                                    {{ $blog->content }}
+                                </p>
                                 <div class="category text-sm font-cuprum">
-                                    <span class="capitalize text-red">movies</span>
+                                    <a href="{{ route('blogs.tags.index', $blog->tag->slug) }}" class="group"><span
+                                        class="capitalize text-red group-hover:text-vanilla transition">{{ $blog->tag->name }}</span></a>
                                     <span>.</span>
-                                    <span>4 min to read</span>
+                                    <span>{{ $blog->time }} min to read</span>
                                 </div>
                             </div>
                         </div>
-                    @endfor
+                    @endforeach
                 </div>
             </div>
         </section>

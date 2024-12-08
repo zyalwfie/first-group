@@ -26,6 +26,16 @@ export default {
                 flashWhite: "#f1f1f1",
                 white: "#ffffff",
             },
+            keyframes: {
+                wiggle: {
+                    "0%": { transform: "translateX(0)" },
+                    "50%": { transform: "translateX(25%)" },
+                    "100%": { transform: "translateX(0)" },
+                },
+            },
+            animation: {
+                wiggle: "wiggle 1s ease-in-out infinite",
+            },
         },
     },
     plugins: [],

@@ -4,9 +4,7 @@
             <div class="flex flex-col gap-y-8 md:flex-row md:justify-between">
                 <div class="flex flex-col gap-y-2 md:w-[40ch]">
                     <h1 class="font-newsCycle text-red text-3xl font-bold">firstGroup.</h1>
-                    <p class="text-sm leading-4 font-light font-ekMukta">Lorem ipsum dolor sit amet consectetur
-                        adipisicing
-                        elit. Laudantium deserunt vero veniam labore repellendus magni porro!</p>
+                    <p class="text-sm leading-4 font-light font-ekMukta">Explore diverse topics and join a community of curious minds. Stay connected for fresh perspectives and engaging stories.</p>
                 </div>
                 <div class="subscribes flex flex-col gap-y-4">
                     <h3 class="font-xl font-semibold font-newsCycle capitalize">get updates</h3>
@@ -19,7 +17,7 @@
                     <div class="social-media flex justify-start gap-x-4">
                         <a href=""
                             class="h-8 w-8 bg-vanilla rounded-full flex justify-center items-center text-xl"><i
-                                class='bx bxl-instagram'></i></a>
+                                class='bx bxl-instagram-alt'></i></a>
                         <a href=""
                             class="h-8 w-8 bg-vanilla rounded-full flex justify-center items-center text-xl"><i
                                 class='bx bxl-twitter'></i></a>
