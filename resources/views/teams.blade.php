@@ -26,7 +26,7 @@
                 <div class="flex flex-col gap-4">
                     <div class="rounded-full md:rounded-lg overflow-hidden shadow-md shadow-duskBlack">
                         <div class="flex-1 flex flex-col gap-6 items-center relative group">
-                            <img src="{{ asset('img/teams/obi.jpg') }}" alt="Team Member"
+                            <img src="{{ asset('img/teams/' . $team->picture) }}" alt="Team Member"
                                 class="w-full md:h-60 object-cover rounded-full md:rounded-lg">
                             <div
                                 class="hidden lg:flex flex-col justify-center items-center gap-1.5 absolute bg-[rgba(0,0,0,0.5)] backdrop-blur-sm text-flashWhite left-1.5 right-1.5 h-max py-2 translate-y-60 group-hover:translate-y-[9.25rem] transition ease-in-out duration-300 rounded-md">

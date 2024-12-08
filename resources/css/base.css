@@ -12,8 +12,10 @@ aside.show {
     z-index: 1;
 }
 
+input[type="text"]:focus + label,
 input[type="email"]:focus + label,
 input[type="password"]:focus + label,
+input[type="text"]:valid + label,
 input[type="email"]:valid + label,
 input[type="password"]:valid + label {
     transform: translateY(-0.5rem);

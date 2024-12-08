@@ -32,9 +32,13 @@ export default {
                     "50%": { transform: "translateX(25%)" },
                     "100%": { transform: "translateX(0)" },
                 },
+                shrink: {
+                    "100%": { width: "0" },
+                },
             },
             animation: {
                 wiggle: "wiggle 1s ease-in-out infinite",
+                shrink: "shrink 3s linear forwards"
             },
         },
     },

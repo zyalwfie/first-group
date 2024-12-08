@@ -14,6 +14,7 @@ class TeamSeeder extends Seeder
     public function run(): void
     {
         Team::create([
+            'picture' => 'obi.jpg',
             'name' => 'zahid h. tobi',
             'social_media' => [
                 'instagram' => [
@@ -32,6 +33,7 @@ class TeamSeeder extends Seeder
         ]);
 
         Team::create([
+            'picture' => 'wafy.jpeg',
             'name' => 'ziyad alwafie',
             'social_media' => [
                 'instagram' => [
@@ -50,6 +52,7 @@ class TeamSeeder extends Seeder
         ]);
 
         Team::create([
+            'picture' => 'jung.jpg',
             'name' => 'zulkarnaen',
             'social_media' => [
                 'instagram' => [

@@ -1,3 +1,5 @@
+import "./closeFlashMsg";
+import "./togglePassword";
 import "./sidebar";
 import "./bootstrap";
 import Swiper from "swiper/bundle";
@@ -8,8 +10,8 @@ const swiper = new Swiper(".swiper", {
         delay: 2500,
         disableOnInteraction: false,
     },
-   scrollbar: {
-    el: '.swiper-scrollbar',
-    draggable: true,
-   }
+    scrollbar: {
+        el: ".swiper-scrollbar",
+        draggable: true,
+    },
 });
