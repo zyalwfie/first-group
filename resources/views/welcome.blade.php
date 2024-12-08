@@ -5,6 +5,28 @@
 
     <x-header></x-header>
 
+    @if (session()->has('logout'))
+        <div class="fixed bg-vanilla px-4 pt-2 pb-3 rounded-md shadow shadow-celadon right-4 top-4 transition overflow-hidden z-30"
+            id="flash-message-container">
+            <div class="flex items-center gap-2">
+                <p class="font-newsCycle text-sm font-semibold">{{ session('logout') }}</p>
+                <i class='bx bx-message-square-x'></i>
+            </div>
+            <div class="w-full h-1 bg-red absolute bottom-0 left-0 animate-shrink"></div>
+        </div>
+    @endif
+
+    @if (session()->has('login'))
+        <div class="fixed bg-vanilla px-4 pt-2 pb-3 rounded-md shadow shadow-celadon right-4 top-4 transition overflow-hidden z-30"
+            id="flash-message-container">
+            <div class="flex items-center gap-2">
+                <p class="font-newsCycle text-sm font-semibold">{{ session('login') }}</p>
+                <i class='bx bx-message-square-x'></i>
+            </div>
+            <div class="w-full h-1 bg-red absolute bottom-0 left-0 animate-shrink"></div>
+        </div>
+    @endif
+
     <main class="mb-10 mt-24">
         {{-- Greetings --}}
         <section class="mb-16 bg-honeydew">

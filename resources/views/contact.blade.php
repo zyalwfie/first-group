@@ -16,18 +16,12 @@
                 </address>
             </div>
             <div class="flex flex-col gap-4">
+                @foreach ($contacts as $contact)
                 <div class="flex flex-col gap-1">
-                    <h3 class="text-lg font-newsCycle font-semibold">Customer Support</h3>
-                    <p class="font-ekMukta font-light text-sm">Our support team is available second the clock to address any concerns or queries you may have.</p>
+                    <h3 class="text-lg font-newsCycle font-semibold">{{ $contact->section_title }}</h3>
+                    <p class="font-ekMukta font-light text-sm">{{ $contact->description }}</p>
                 </div>
-                <div class="flex flex-col gap-1">
-                    <h3 class="text-lg font-newsCycle font-semibold">Feedback and Suggestions</h3>
-                    <p class="font-ekMukta font-light text-sm">We value your feedback and are continuously working to improve firstGroup. Your input is crucial in shaping the future of firstGroup.</p>
-                </div>
-                <div class="flex flex-col gap-1q">
-                    <h3 class="text-lg font-newsCycle font-semibold">Media Queries</h3>
-                    <p class="font-ekMukta font-light text-sm">For media-related questions or press inquiries, please contact us at firstgroup@gmail.com.</p>
-                </div>
+                @endforeach
             </div>
         </section>
         <section class="flex-1">
@@ -58,6 +52,6 @@
             </div>
         </section>
     </main>
-    
+
     <x-footer></x-footer>
 </x-layout>

@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Team extends Model
 {
     protected $fillable = [
+        'picture',
         'name',
         'social_media'
     ];
